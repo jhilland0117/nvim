@@ -83,7 +83,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "130"
 
 -- copy between neovim and other apps
-vim.opt.clipboard:append("unnamedplus")
+-- vim.opt.clipboard:append("unnamedplus")
 
 -- highlight text in search
 vim.opt.hlsearch = true
@@ -92,4 +92,3 @@ vim.opt.hlsearch = true
 vim.opt.mouse = "a"
 
 vim.g.editorconfig = true
-

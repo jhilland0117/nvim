@@ -39,7 +39,7 @@ vim.keymap.set("v", ">", ">gv", opts)
 
 -- selected text mode, _ black hole register, d delet selected text, P paste before cursor position
 -- when you paste over a selection with leader-p it replaces the text without changing what you last yanked
-vim.keymap.set("x", "<leader>p", [["_dP]]
+vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- remember yanked
 vim.keymap.set("v", "p", '"_dp', opts)

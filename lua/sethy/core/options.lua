@@ -6,7 +6,7 @@ vim.cmd("let g:netrw_banner = 0")
 
 -- line numbers
 vim.opt.nu = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- indentation
 vim.opt.tabstop = 4

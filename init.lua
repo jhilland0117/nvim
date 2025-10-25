@@ -1,10 +1,5 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
 
-vim.g.mapleader = " "
-
+-- configure lazyvim, install it if not already
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -18,11 +13,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
-}
-local opts = {}
-
-require("lazy").setup(plugins, opts)
-require("catppuccin").setup({flavour = "mocha"})
-vim.cmd.colorscheme "catppuccin-mocha"
+-- include appropriate files, packages, opts
+require("lazy").setup("plugins")
+require("reaper.keymaps")

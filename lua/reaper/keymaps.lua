@@ -22,3 +22,14 @@ config.setup({
     highlight = { enable = true },
     indent = { enable = true }
 })
+
+-- neotree (file explorer key mappings)
+-- Easier window navigation, ctrl + directional
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+
+
+-- general keymaps
+vim.keymap.set('n', "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })

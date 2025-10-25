@@ -16,3 +16,4 @@ vim.opt.rtp:prepend(lazypath)
 -- include appropriate files, packages, opts
 require("lazy").setup("plugins")
 require("reaper.keymaps")
+

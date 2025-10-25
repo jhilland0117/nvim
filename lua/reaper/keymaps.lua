@@ -33,3 +33,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
 -- general keymaps
 vim.keymap.set('n', "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
+
+-- adding file or directory
+-- file: in neotree just type 'a' and name file
+-- directory: same as above but end with '/'

@@ -25,14 +25,17 @@ config.setup({
 
 -- neotree (file explorer key mappings)
 -- Easier window navigation, ctrl + directional
-vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+vim.keymap.set("n", "H", "<C-w>h", { noremap = true, silent = true })
+vim.keymap.set("n", "J", "<C-w>j", { noremap = true, silent = true })
+vim.keymap.set("n", "K", "<C-w>k", { noremap = true, silent = true })
+vim.keymap.set("n", "L", "<C-w>l", { noremap = true, silent = true })
 
 
 -- general keymaps
 vim.keymap.set('n', "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
+-- Make Shift+W save the current file
+vim.keymap.set("n", "W", "<cmd>w<CR>", { noremap = true, silent = true, desc = "Save file" })
+
 
 -- adding file or directory
 -- file: in neotree just type 'a' and name file

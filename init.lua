@@ -17,4 +17,4 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("reaper.keymaps")
 require("reaper.options")
-
+require("mason").setup()

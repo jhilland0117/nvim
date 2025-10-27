@@ -1,4 +1,3 @@
--- single file for all plugin installs
 return {
     { -- just the style plugin
         'AlexvZyl/nordic.nvim',
@@ -31,9 +30,41 @@ return {
         },
         lazy = false, -- neo-tree will lazily load itself
     },
-    { -- tool dependency installer, such as LSPs, DAPs, Linters
+    {
         "mason-org/mason.nvim",
-        opts = {}
-    }
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                }
+            }
+        }
+    },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {
+            automatic_enable = {
+                pyright,
+                clangd,
+                jdtls,
+                lua_ls,
+                bashls,
+            },
+            automatic_installation = true,
+            ensure_installed = {
+                pyright,
+                clangd,
+                jdtls,
+                lua_ls,
+                bashls,
+            }
+        },
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+    },
 }
 

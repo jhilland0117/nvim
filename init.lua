@@ -15,6 +15,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- include appropriate files, packages, opts
 require("lazy").setup("plugins")
+require("lazy").setup("lsp")
 require("reaper.keymaps")
 require("reaper.options")
 require("mason").setup()
+require("mason-lspconfig").setup()
+
+-- setup nvim-lspconfig
+vim.lsp.enable('pyright')

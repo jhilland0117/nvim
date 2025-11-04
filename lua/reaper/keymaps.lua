@@ -57,4 +57,8 @@ vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>cb", ":bd<CR>", { desc = "Close buffer" })
 
+-- Split window management
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true, desc = "Vertical split" })
+vim.keymap.set("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true, desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>sc", ":close<CR>", { noremap = true, silent = true, desc = "Close current split" })
 

@@ -8,6 +8,10 @@
 ```<leader>wg```    : save all and exit all
 ```<leader>d```     : lsp diagnostics
 ```<leader>cb```    : close buffer
+```<leader>sv```    : split window vertically
+```<leader>sh```    : split window horizontally
+```<leader>sc```    : close current split 
+
 
 ```[d```            : next diagnostics
 ```]d```            : prev diagnostics

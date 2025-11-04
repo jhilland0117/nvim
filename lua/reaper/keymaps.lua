@@ -30,6 +30,9 @@ vim.keymap.set("n", "J", "<C-w>j", { noremap = true, silent = true })
 vim.keymap.set("n", "K", "<C-w>k", { noremap = true, silent = true })
 vim.keymap.set("n", "L", "<C-w>l", { noremap = true, silent = true })
 
+-- spam indenting
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
 -- general keymaps
 vim.keymap.set('n', "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
@@ -40,3 +43,12 @@ vim.keymap.set("n", "W", "<cmd>w<CR>", { noremap = true, silent = true, desc = "
 -- adding file or directory
 -- file: in neotree just type 'a' and name file
 -- directory: same as above but end with '/'
+
+-- Show diagnostics
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true, desc = "Show diagnostics" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true, desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true, desc = "Next diagnostic" })
+
+-- Code actions
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, silent = true, desc = "LSP code action" })
+

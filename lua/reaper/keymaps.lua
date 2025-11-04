@@ -52,4 +52,9 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = t
 -- Code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { noremap = true, silent = true, desc = "LSP code action" })
 
+-- buffer commands
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>cb", ":bd<CR>", { desc = "Close buffer" })
+
 

@@ -19,7 +19,27 @@ require("lazy").setup("lsp")
 require("reaper.keymaps")
 require("reaper.options")
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+    ensure_installed = { "pyright", "lua_ls" },
+    automatic_enable = true,
+})
 
--- setup nvim-lspconfig
-vim.lsp.enable('pyright')
+local cmp = require("cmp")
+cmp.setup({
+    snippet = {
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
+    },
+    mapping = {
+        ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+        { name = "nvim_lsp" },
+        { name = "buffer" },
+        { name = "path" },
+    },
+})
+

@@ -44,27 +44,22 @@ return {
     },
     {
         "mason-org/mason-lspconfig.nvim",
-        opts = {
-            automatic_enable = {
-                pyright,
-                clangd,
-                jdtls,
-                lua_ls,
-                bashls,
-            },
-            automatic_installation = true,
-            ensure_installed = {
-                pyright,
-                clangd,
-                jdtls,
-                lua_ls,
-                bashls,
-            }
-        },
+        opts = {},
         dependencies = {
             { "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
         },
     },
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",  -- LSP completion source
+            "hrsh7th/cmp-buffer",    -- buffer words
+            "hrsh7th/cmp-path",      -- file paths
+            "hrsh7th/cmp-vsnip",     -- snippet support
+            "hrsh7th/vim-vsnip"      -- snippet engine
+        }
+    }
+
 }
 

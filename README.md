@@ -2,21 +2,21 @@
 
 ## Keymaps
 
-```<leader>ca```    : code action from lsp 
-```<leader>ff```    : find files
-```<leader>fg```    : live grep
-```<leader>wg```    : save all and exit all
-```<leader>d```     : lsp diagnostics
-```<leader>cb```    : close buffer
-```<leader>sv```    : split window vertically
-```<leader>sh```    : split window horizontally
-```<leader>sc```    : close current split 
-```<leader>f```     : format all (normal and visual mode)
-```<leader>y```     : yank to system clipboard (normal and visual)
-```<leader>p```     : copy from system clipboard (normal and visual)
+```<leader>ca```    : code action from lsp  
+```<leader>ff```    : find files  
+```<leader>fg```    : live grep  
+```<leader>wg```    : save all and exit all  
+```<leader>d```     : lsp diagnostics  
+```<leader>cb```    : close buffer  
+```<leader>sv```    : split window vertically  
+```<leader>sh```    : split window horizontally  
+```<leader>sc```    : close current split  
+```<leader>f```     : format all (normal and visual mode)  
+```<leader>y```     : yank to system clipboard (normal and visual)  
+```<leader>p```     : copy from system clipboard (normal and visual)  
 
-```[d```            : next diagnostics
-```]d```            : prev diagnostics
+```[d```            : next diagnostics  
+```]d```            : prev diagnostics  
 
-```Tab```           : tab between buffers (multiple files)
-```S-Tab```         : previous tab (multiple files)
+```Tab```           : tab between buffers (multiple files)  
+```S-Tab```         : previous tab (multiple files)   

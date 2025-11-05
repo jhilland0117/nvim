@@ -69,3 +69,12 @@ vim.keymap.set("n", "<leader>sc", ":close<CR>", { noremap = true, silent = true,
 -- Format code
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true, desc = "Format buffer" })
 vim.keymap.set("v", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true, desc = "Format selection" })
+
+-- Yank to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y", { noremap = true, silent = true, desc = "Yank to clipboard" })
+vim.keymap.set("v", "<leader>y", "\"+y", { noremap = true, silent = true, desc = "Yank to clipboard" })
+-- Paste from clipboard
+vim.keymap.set("n", "<leader>p", "\"+p", { noremap = true, silent = true, desc = "Paste from clipboard" })
+vim.keymap.set("v", "<leader>p", "\"+p", { noremap = true, silent = true, desc = "Paste from clipboard" })
+
+

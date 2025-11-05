@@ -12,6 +12,8 @@
 ```<leader>sh```    : split window horizontally
 ```<leader>sc```    : close current split 
 ```<leader>f```     : format all (normal and visual mode)
+```<leader>y```     : yank to system clipboard (normal and visual)
+```<leader>p```     : copy from system clipboard (normal and visual)
 
 ```[d```            : next diagnostics
 ```]d```            : prev diagnostics

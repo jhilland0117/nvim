@@ -25,5 +25,5 @@
 ```AlexvZyl/nordic.nvim```              : style plugin  
 ```nvim-telescope/telescope.nvim```     : search files  
 ```nvim-treesitter/nvim-treesitter```   : nested highlight  
-
+```nvim-neo-tree/neo-tree.nvim"```      : file explorer 
 

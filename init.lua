@@ -18,6 +18,7 @@ require("lazy").setup("plugins")
 require("lazy").setup("lsp")
 require("reaper.keymaps")
 require("reaper.options")
+require("reaper.layout")
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "pyright", "lua_ls" },

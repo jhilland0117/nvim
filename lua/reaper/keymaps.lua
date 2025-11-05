@@ -34,8 +34,17 @@ vim.keymap.set("n", "L", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
--- general keymaps
-vim.keymap.set("n", "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
+-- save all and leave buffer
+vim.keymap.set("n", "<leader>wq", function()
+    -- Save all writable buffers, silently
+    pcall(function()
+        vim.cmd("silent! wall")
+    end)
+
+    -- Then quit all windows, even if some buffers weren't writable
+    vim.cmd("qa!")
+end, { noremap = true, silent = true, desc = "Save all and quit safely" })
+
 -- Make Shift+W save the current file
 vim.keymap.set("n", "W", "<cmd>w<CR>", { noremap = true, silent = true, desc = "Save file" })
 
@@ -77,4 +86,6 @@ vim.keymap.set("v", "<leader>y", "\"+y", { noremap = true, silent = true, desc =
 vim.keymap.set("n", "<leader>p", "\"+p", { noremap = true, silent = true, desc = "Paste from clipboard" })
 vim.keymap.set("v", "<leader>p", "\"+p", { noremap = true, silent = true, desc = "Paste from clipboard" })
 
+-- exit terminal mode
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit terminal mode" })
 

@@ -19,4 +19,11 @@
 ```]d```            : prev diagnostics  
 
 ```Tab```           : tab between buffers (multiple files)  
-```S-Tab```         : previous tab (multiple files)   
+```S-Tab```         : previous tab (multiple files)  
+
+## Plugins
+```AlexvZyl/nordic.nvim```              : style plugin  
+```nvim-telescope/telescope.nvim```     : search files  
+```nvim-treesitter/nvim-treesitter```   : nested highlight  
+
+

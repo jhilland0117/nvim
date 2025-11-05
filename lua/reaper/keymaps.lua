@@ -7,20 +7,20 @@ vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 
 -- find files using telescope
-local builtin = require('telescope.builtin')
+local builtin = require("telescope.builtin")
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- setup treesitter highlighting
 local config = require("nvim-treesitter.configs")
 config.setup({
-    ensure_installed = {"c", "markdown", "java", "python", "lua", "javascript"},
-    highlight = { enable = true },
-    indent = { enable = true }
+	ensure_installed = { "c", "markdown", "java", "python", "lua", "javascript" },
+	highlight = { enable = true },
+	indent = { enable = true },
 })
 
 -- neotree (file explorer key mappings)
@@ -35,17 +35,21 @@ vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
 -- general keymaps
-vim.keymap.set('n', "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
+vim.keymap.set("n", "<leader>wq", "<cmd>wqall<CR>", { noremap = true, silent = true, desc = "Save and quit all" })
 -- Make Shift+W save the current file
 vim.keymap.set("n", "W", "<cmd>w<CR>", { noremap = true, silent = true, desc = "Save file" })
-
 
 -- adding file or directory
 -- file: in neotree just type 'a' and name file
 -- directory: same as above but end with '/'
 
 -- Show diagnostics
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true, desc = "Show diagnostics" })
+vim.keymap.set(
+	"n",
+	"<leader>d",
+	vim.diagnostic.open_float,
+	{ noremap = true, silent = true, desc = "Show diagnostics" }
+)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true, desc = "Previous diagnostic" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true, desc = "Next diagnostic" })
 
@@ -62,3 +66,6 @@ vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true
 vim.keymap.set("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true, desc = "Horizontal split" })
 vim.keymap.set("n", "<leader>sc", ":close<CR>", { noremap = true, silent = true, desc = "Close current split" })
 
+-- Format code
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true, desc = "Format buffer" })
+vim.keymap.set("v", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true, desc = "Format selection" })

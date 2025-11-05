@@ -11,7 +11,7 @@
 ```<leader>sv```    : split window vertically
 ```<leader>sh```    : split window horizontally
 ```<leader>sc```    : close current split 
-
+```<leader>f```     : format all (normal and visual mode)
 
 ```[d```            : next diagnostics
 ```]d```            : prev diagnostics

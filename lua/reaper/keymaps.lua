@@ -5,6 +5,10 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 vim.g.mapleader = " "
+vim.env.HTTP_PROXY = "http://192.168.0.30:3128"
+vim.env.HTTPS_PROXy = "https://192.168.0.30:3128"
+vim.env.NPM_CONFIG_STRICT_SSL = "false"
+
 
 -- find files using telescope
 local builtin = require("telescope.builtin")

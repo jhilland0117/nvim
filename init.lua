@@ -11,6 +11,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     lazypath,
   })
 end
+
+vim.g.mapleader = " "
 vim.opt.rtp:prepend(lazypath)
 
 -- include appropriate files, packages, opts
@@ -19,10 +21,6 @@ require("lazy").setup("lsp")
 require("reaper.keymaps")
 require("reaper.options")
 require("reaper.layout")
-
-vim.env.HTTP_PROXY = "http://192.168.0.30:3128"
-vim.env.HTTPS_PROXy = "https://192.168.0.30:3128"
-vim.env.NPM_CONFIG_STRICT_SSL = "false"
 
 require("mason").setup()
 require("mason-lspconfig").setup({

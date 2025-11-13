@@ -19,6 +19,11 @@ require("lazy").setup("lsp")
 require("reaper.keymaps")
 require("reaper.options")
 require("reaper.layout")
+
+vim.env.HTTP_PROXY = "http://192.168.0.30:3128"
+vim.env.HTTPS_PROXy = "https://192.168.0.30:3128"
+vim.env.NPM_CONFIG_STRICT_SSL = "false"
+
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "pyright", "lua_ls" },
